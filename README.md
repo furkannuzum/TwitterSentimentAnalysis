@@ -1,39 +1,42 @@
-# Twitter Sentiment Analysis
+# Twitter Sentiment Analysis Projesi
 
 ## Proje Hakkında
-Bu proje, Twitter verileri üzerinde duygu analizi yapmayı amaçlamaktadır. Gözetimli öğrenme teknikleri kullanılarak tweetlerin pozitif, negatif veya nötr duygu taşıyıp taşımadığı sınıflandırılmıştır. Proje, veri ön işleme, model seçimi, eğitim, değerlendirme ve sonuçların yorumlanmasını içermektedir.
+Bu proje kapsamında, Twitter'dan toplanan tweet verileri kullanılarak duygu analizi yapılmıştır. Amaç, bir tweet'in pozitif mi, negatif mi yoksa nötr mü olduğunu otomatik olarak sınıflandırabilen bir model geliştirmektir. Sosyal medya üzerindeki duygu durumunu anlamak, markalar ve kurumlar için oldukça önemlidir ve bu proje de bu ihtiyaca yönelik bir çözüm sunmayı hedeflemektedir.
 
-## Kullanılan Veri Seti
-- Twitter üzerinden çekilmiş tweetler
-- Veri setinde metinler ve etiketli duygu sınıfları bulunmaktadır.
-- Veri seti detayları ve kaynakları notebook içerisinde açıklanmıştır.
+## Veri Seti ve Problem Tanımı
+Kullanılan veri seti, çeşitli tweet'lerin metin içeriklerini ve bunlara ait duygu etiketlerini içermektedir. Gözetimli öğrenme yöntemleriyle bu tweet'ler sınıflandırılmıştır. Proje temel olarak ikili sınıflandırma olarak ele alınmış ancak gerektiğinde çoklu sınıflandırmaya da uyarlanabilir.
 
-## Proje Adımları
-1. **Keşifsel Veri Analizi (EDA):**  
-   Pandas, Matplotlib ve Seaborn kullanılarak veri setinin genel özellikleri incelenmiş, görselleştirmeler yapılmıştır.
+## Kullanılan Yöntemler ve Modeller
+Projede aşağıdaki algoritmalar denenmiştir:  
+- Logistic Regression  
+- Decision Tree Classifier  
+- K-Nearest Neighbors (KNN)  
+- Support Vector Machine (SVM)  
 
-2. **Veri Ön İşleme:**  
-   Metin temizleme, tokenizasyon, stopword çıkarımı ve gerekirse etiketlerin dönüştürülmesi yapılmıştır.
+Modeller, veri ön işleme ve özellik mühendisliği adımlarından sonra eğitilmiş ve çapraz doğrulama ile performansları değerlendirilmiştir.
 
-3. **Model Seçimi:**  
-   Logistic Regression, Decision Tree, KNN ve SVM gibi farklı sınıflandırma algoritmaları denenmiştir.
+## Sonuçlar ve Model Seçimi
+- Logistic Regression ve SVM modelleri en yüksek doğruluk oranlarını elde etti.  
+- Decision Tree ve KNN modelleri, özellikle dengesiz sınıflar nedeniyle daha düşük performans gösterdi.  
+- Model açıklanabilirliği ve eğitim hızı göz önüne alınarak Logistic Regression tercih edildi.
 
-4. **Model Eğitimi ve Değerlendirme:**  
-   Modellerin doğruluk, precision, recall, f1-score gibi performans metrikleri hesaplanmış, çapraz doğrulama uygulanmıştır.
+## Projenin Gerçek Dünya Katkısı
+Bu proje, sosyal medya analizleri, müşteri duygu takibi ve halkla ilişkiler alanlarında kullanılabilir. Otomatik duygu sınıflandırması sayesinde hızlı ve doğru karar destek sistemleri geliştirilebilir.
 
-5. **Sonuç ve Yorumlar:**  
-   En iyi performansı Logistic Regression ve SVM göstermiştir. Model seçimi ve gelecekte yapılabilecek geliştirmeler README dosyasında açıklanmıştır.
+## İyileştirme Fırsatları
+- Daha büyük ve farklı veri kaynaklarıyla modelin genellenebilirliği artırılabilir.  
+- Derin öğrenme tabanlı doğal dil işleme yöntemleri (BERT, GPT gibi) entegre edilebilir.  
+- Modelin sonuçları gerçek zamanlı analiz yapabilen bir web uygulaması şeklinde sunulabilir.  
+- Veri ön işleme aşaması geliştirilerek daha temiz ve anlamlı özellikler çıkarılabilir.
 
-## Kullanılan Teknolojiler ve Kütüphaneler
-- Python 3.x
-- Jupyter Notebook
-- Pandas, Numpy
-- Scikit-learn
-- Matplotlib, Seaborn
+## Proje Dosyaları
+- `twittersentimentanalysis.ipynb`: Kodlar ve detaylı açıklamalar.  
+- `README.md`: Proje özeti, sonuçlar ve geliştirme önerileri.
 
+## Kaggle Linki
+[Twitter Sentiment Analysis Notebook](https://www.kaggle.com/code/furkannuzum/twittersentimentanalysis/notebook)
 
-## Kaggle Notebook Linki
-[Twitter Sentiment Analysis Notebook](https://www.kaggle.com/code/furkannuzum/twittersentimentanalysis)
+---
 
-
-**Not:** Proje dosyaları ve detaylı kod açıklamaları `twittersentimentanalysis.ipynb` dosyasında bulunmaktadır.
+Sorularınız ve önerileriniz için iletişime geçebilirsiniz.  
+Teşekkürler!
